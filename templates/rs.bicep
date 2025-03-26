@@ -44,11 +44,9 @@ resource prefixIpV4 'Microsoft.Network/publicIPPrefixes@2020-11-01' = {
   }
   zones:[
     '1'
-    '2'
-    '3'
   ]
   properties: {
-    prefixLength: 28
+    prefixLength: 29
     publicIPAddressVersion: 'IPv4'
   }
 }
@@ -478,6 +476,7 @@ resource hubBastion 'Microsoft.Network/bastionHosts@2020-11-01' = {
     ]
   }
 }
+/*
 resource Branch1Bastion 'Microsoft.Network/bastionHosts@2020-11-01' = {
   name: 'Branch1Bastion'
   dependsOn:[
@@ -522,6 +521,7 @@ resource Branch2Bastion 'Microsoft.Network/bastionHosts@2020-11-01' = {
     ]
   }
 }
+*/
 //PEERINGS
 resource spoke1hub 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2020-08-01' = {
   name: 'spoke1-hub'
